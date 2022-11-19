@@ -3,17 +3,17 @@ package com.spring.kafka.controller;
 import com.spring.kafka.response.Response;
 import com.spring.kafka.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class OrderController {
 
     @Autowired
     private OrderService orderService;
 
-
-    public Response saveOrder(){
-
+    @PostMapping
+    public Response saveOrder() {
         return null;
     }
 }
